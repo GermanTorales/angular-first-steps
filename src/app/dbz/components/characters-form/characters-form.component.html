@@ -1,0 +1,29 @@
+<form class="row" (ngSubmit)="saveCharacter()">
+  <input
+    type="text"
+    class="form-control mb-2"
+    placeholder="Name"
+    name="name"
+    [(ngModel)]="character.name"
+  />
+
+  <input
+    type="number"
+    class="form-control mb-2"
+    name=""
+    id=""
+    placeholder="Power"
+    name="power"
+    [(ngModel)]="character.power"
+  />
+
+  <input
+    type="text"
+    class="form-control mb-2"
+    placeholder="Origin"
+    name="origin"
+    [(ngModel)]="character.origin"
+  />
+
+  <button type="submit" class="form-control btn btn-primary">Add</button>
+</form>

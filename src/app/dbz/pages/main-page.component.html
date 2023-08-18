@@ -1,0 +1,27 @@
+<h1>DBZ Characters</h1>
+<hr />
+<div class="row">
+  <div class="col">
+    <h4>List</h4>
+
+    <!-- La palabra entre corchetes [] hace referencia al INPUT del componente
+      en este caso "app-characters-list" mientras que la palabra entre comillas
+      es el dato que se quiere enviar a ese input
+    -->
+    <app-characters-list
+      (onDeleteCharacter)="onDeleteCharacter($event)"
+      [characterList]="characters"
+    ></app-characters-list>
+  </div>
+  <div class="col">
+    <h4>Add new character</h4>
+
+    <!-- La palabra entre parentesis hace referncia al OUTPUT de un componente hijo
+      en este caso "app-characters-form" mientras que la funcion ejecutada entre comiilas
+      es un metodo de la clase padre que recibe el dato enviado por el output
+    -->
+    <app-characters-form
+      (onNewCharacter)="onCreateCharacter($event)"
+    ></app-characters-form>
+  </div>
+</div>
